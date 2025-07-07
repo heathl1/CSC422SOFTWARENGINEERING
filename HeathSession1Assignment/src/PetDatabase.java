@@ -12,7 +12,8 @@ public class PetDatabase {
         System.out.println("1) Show pets");
         System.out.println("2) Add more pets");
         System.out.println("3) Update existing pet");
-        System.out.println("4) Exit the program");
+        System.out.println("4) Remove an existing pet");
+        System.out.println("5) Exit the program");
 
     }
     public void addPet(Pet pet) {
@@ -40,6 +41,21 @@ public class PetDatabase {
             System.out.println(pet); // use toString defined in pet class
         }
         System.out.println("+-----------------------+"); // table separator
+    }
+
+    public void removePet(int id) {
+        boolean found = false; // tracks whether the pet is found or not
+        for (Pet pet: petDatabase) { // iterate through the database
+            if (pet.getId() == id) {
+                int index = petDatabase.indexOf(pet);
+                petDatabase.remove(index); // remove the pet with the matching id
+                found = true;
+                break;
+            }
+        }
+        if (!found){ // prints if a pet is not found
+            System.out.println("Pet not found");
+        }
     }
 
 

@@ -48,12 +48,19 @@ public class Main {
                         System.out.println(petToUpdate);
                     }
                     break;
-                case 4: // exit the program
+                case 4:
+                    petDatabase.showPets();
+                    System.out.print("Select the ID of the pet you'd like to remove: ");
+                    int removeId = input.nextInt(); // get id to remove
+                    petDatabase.removePet(removeId); // call removePet method
+                    break;
+                case 5: // exit the program
                     break;
                 default:
                     System.out.println("Invalid choice. Please Try again"); // executes when the number is not a choice
             }
-        } while (choice != 4);
+        } while (choice != 5);
+
 
         // print database objects to ensure they are properly loaded
         /*
