@@ -19,6 +19,6 @@ public class Pet {
 
     @Override
     public String toString() { // override default toString() method
-        return String.format("|%-3d|%-10s|%-4d|", this.id, this.name, this.age);
+        return String.format("|%3d | %-10s |%4d |", this.id, this.name, this.age);
     }
 }

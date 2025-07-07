@@ -18,7 +18,10 @@ public class Main {
             choice = input.nextInt(); // take in user input
             input.nextLine(); // clear the buffer
             switch (choice) { // execute correspinding choice
-                case 1:  // add new pets
+                case 1:
+                    petDatabase.showPets();
+                    break;
+                case 2:  // add new pets
                     String pet = ""; // initialize pet string variable
                     while (!pet.equals("done")) { // continue adding pets until user types done
                         System.out.print("add pet (name, age): ");
@@ -31,17 +34,18 @@ public class Main {
                         petDatabase.addPet(new Pet(petData[0], Integer.parseInt(petData[1])));
                     }
                     break;
-                case 2: // exit the program
+                case 3: // exit the program
                     break;
                 default:
                     System.out.println("Invalid choice. Please Try again"); // executes when the number is not a choice
             }
-        } while (choice != 2);
+        } while (choice != 3);
 
         // print database objects to ensure they are properly loaded
+        /*
         for (Pet pet: petDatabase.petDatabase) {
             System.out.println(pet);
         }
-
+         */
     }
 }
