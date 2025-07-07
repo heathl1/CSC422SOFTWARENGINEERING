@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 /*
 Assignment: Session 1 - pet database assignment
