@@ -24,11 +24,11 @@ public class Pet {
     public String getName() {
         return this.name;
     }
-
+    // retrieve pet age in non-private context
     public int getAge() {
         return this.age;
     }
-
+    // update pet info
     public void updatePet(String name, int age) {
         this.name = name;
         this.age = age;
