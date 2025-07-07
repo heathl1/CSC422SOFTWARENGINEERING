@@ -1,16 +1,22 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-/* references
+/*
+Assignment: Session 1 - pet database assignment
+Author: Layla Heath
+
+references:
 https://www.w3schools.com/java/java_switch.asp
  */
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Layla Heath - heathl1@csp.edu");
+        System.out.println("I certify that this program is all my own work");
+        System.out.println("Pet Database Program.");
+
         Scanner input = new Scanner(System.in); // scanner to take in user input
         PetDatabase petDatabase = new PetDatabase(); // pet database to hold the
-
         int choice; // variable to hold the user choice
-        System.out.println("Pet Database Program.");
 
         do {
             petDatabase.menu(); // print menu
