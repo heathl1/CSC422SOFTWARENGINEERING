@@ -16,6 +16,15 @@ public class Pet {
         this.age = age;
         this.id = count++;
     }
+    // used to retrieve the id
+    public int getId() {
+        return this.id;
+    }
+
+    public void updatePet(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     @Override
     public String toString() { // override default toString() method

@@ -11,12 +11,23 @@ public class PetDatabase {
         System.out.println("What would you like to do?");
         System.out.println("1) Show pets");
         System.out.println("2) Add more pets");
-        System.out.println("3) Exit the program");
+        System.out.println("3) Update existing pet");
+        System.out.println("4) Exit the program");
 
     }
     public void addPet(Pet pet) {
         // add pet to the database
         petDatabase.add(pet);
+    }
+
+    public Pet getPet(int id) {
+        for (Pet pet: petDatabase) {
+            if (id == pet.getId()) {
+                return pet;
+            }
+        }
+        System.out.println("Pet not found");
+        return null;
     }
 
 
