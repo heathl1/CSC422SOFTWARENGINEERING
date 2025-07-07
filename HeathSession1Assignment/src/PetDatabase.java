@@ -13,7 +13,9 @@ public class PetDatabase {
         System.out.println("2) Add more pets");
         System.out.println("3) Update existing pet");
         System.out.println("4) Remove an existing pet");
-        System.out.println("5) Exit the program");
+        System.out.println("5) Search pets by name");
+        System.out.println("6) Search pets by age ");
+        System.out.println("7) Exit the program");
 
     }
     public void addPet(Pet pet) {
@@ -37,7 +39,7 @@ public class PetDatabase {
         System.out.println("+-----------------------+"); // line to seperate the table
         System.out.printf("|%3s | %-10s |%4s |\n", "ID", "NAME", "AGE"); // headers for the columns
         System.out.println("+-----------------------+"); // table separator
-        for (Pet pet : petDatabase) {
+        for (Pet pet : this.petDatabase) {
             System.out.println(pet); // use toString defined in pet class
         }
         System.out.println("+-----------------------+"); // table separator
@@ -56,6 +58,30 @@ public class PetDatabase {
         if (!found){ // prints if a pet is not found
             System.out.println("Pet not found");
         }
+    }
+
+    public void searchByName(String name) {
+        System.out.println("+-----------------------+"); // line to seperate the table
+        System.out.printf("|%3s | %-10s |%4s |\n", "ID", "NAME", "AGE"); // headers for the columns
+        System.out.println("+-----------------------+"); // table separator
+        for (Pet pet : this.petDatabase) { //iterate through database
+            if (name.equals(pet.getName())) {
+                System.out.println(pet); // print pets with matching name
+            }
+        }
+        System.out.println("+-----------------------+"); // table separator
+    }
+
+    public void searchByAge(int age) {
+        System.out.println("+-----------------------+"); // line to seperate the table
+        System.out.printf("|%3s | %-10s |%4s |\n", "ID", "NAME", "AGE"); // headers for the columns
+        System.out.println("+-----------------------+"); // table separator
+        for (Pet pet : this.petDatabase) { //iterate through database
+            if (age == pet.getAge()) {
+                System.out.println(pet); // print pets with matching age
+            }
+        }
+        System.out.println("+-----------------------+"); // table separator
     }
 
 

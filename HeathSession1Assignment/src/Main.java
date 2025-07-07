@@ -54,19 +54,23 @@ public class Main {
                     int removeId = input.nextInt(); // get id to remove
                     petDatabase.removePet(removeId); // call removePet method
                     break;
-                case 5: // exit the program
+                case 5: // search by name
+                    System.out.print("Enter the name you would like to search: ");
+                    String name = input.next(); // take in user input for name
+                    petDatabase.searchByName(name);
                     break;
+                case 6: // search by age
+                    System.out.print("Enter the age you would like to search: ");
+                    int age = input.nextInt(); // take in user input for age
+                    petDatabase.searchByAge(age);
+                    break;
+                case 7: // exit the program
+                    break;
+
                 default:
                     System.out.println("Invalid choice. Please Try again"); // executes when the number is not a choice
             }
-        } while (choice != 5);
+        } while (choice != 7);
 
-
-        // print database objects to ensure they are properly loaded
-        /*
-        for (Pet pet: petDatabase.petDatabase) {
-            System.out.println(pet);
-        }
-         */
     }
 }

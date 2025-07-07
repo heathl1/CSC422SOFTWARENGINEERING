@@ -16,9 +16,17 @@ public class Pet {
         this.age = age;
         this.id = count++;
     }
-    // used to retrieve the id
+    // used to retrieve the id in non-private context
     public int getId() {
         return this.id;
+    }
+    // retrive pet name in non-private context
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
     }
 
     public void updatePet(String name, int age) {
